@@ -1,0 +1,46 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>Haflinger-Ignite</name>
+	<description>Apache Ignite-specific messaging artifacts for the Haflinger eventing library</description>
+	<artifactId>haflinger-ignite</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>com.strategicgains.haflinger</groupId>
+		<artifactId>haflinger-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<ignite.version>2.14.0</ignite.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.strategicgains.haflinger</groupId>
+			<artifactId>haflinger-core</artifactId>
+			<version>${project.parent.version}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.ignite</groupId>
+		    <artifactId>ignite-core</artifactId>
+		    <version>${ignite.version}</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<argLine>--add-opens=jdk.management/com.sun.management.internal=ALL-UNNAMED --add-opens=java.base/jdk.internal.misc=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.management/com.sun.jmx.mbeanserver=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=java.base/sun.reflect.generics.reflectiveObjects=ALL-UNNAMED --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED -Djdk.tls.client.protocols=TLSv1.2</argLine>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+</project>

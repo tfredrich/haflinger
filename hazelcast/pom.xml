@@ -1,0 +1,32 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<name>Haflinger-Hazelcast</name>
+	<description>Hazelcast-specific artifacts for the Haflinger eventing library</description>
+	<artifactId>haflinger-hazelcast</artifactId>
+	<packaging>jar</packaging>
+
+	<parent>
+		<groupId>com.strategicgains.haflinger</groupId>
+		<artifactId>haflinger-parent</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<properties>
+		<hazelcast.version>5.2.1</hazelcast.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.strategicgains.haflinger</groupId>
+			<artifactId>haflinger-core</artifactId>
+			<version>${project.parent.version}</version>
+			<type>jar</type>
+		</dependency>
+		<dependency>
+		    <groupId>com.hazelcast</groupId>
+		    <artifactId>hazelcast</artifactId>
+		    <version>${hazelcast.version}</version>
+		</dependency>
+	</dependencies>
+</project>
