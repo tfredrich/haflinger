@@ -11,7 +11,6 @@ import org.junit.Test;
 import com.strategicgains.haflinger.routing.EventChannelRouter;
 import com.strategicgains.haflinger.routing.RoutingRule;
 import com.strategicgains.haflinger.routing.SelectiveEventSubscriber;
-import com.strategicgains.haflinger.simple.SimpleEventChannel;
 
 /**
  * @author toddf

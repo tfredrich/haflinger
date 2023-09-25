@@ -7,8 +7,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.strategicgains.haflinger.routing.SelectiveEventSubscriber;
-import com.strategicgains.haflinger.simple.SimpleEventChannel;
-import com.strategicgains.haflinger.simple.SimpleEventChannelBuilder;
 
 /**
  * @author toddf
